@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacUnionFinancial.Intergrat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacUnionFinancial.Intergration.WebApi.Tests", "PacUnionFinancial.Intergration.WebApi.Tests\PacUnionFinancial.Intergration.WebApi.Tests.csproj", "{F795BD02-DC44-4D39-82AD-02B153C6F964}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacUnionFinancial.Intergration.EF", "PacUnionFinancial.Intergration.EF\PacUnionFinancial.Intergration.EF.csproj", "{943C27A8-157B-4389-ABC2-824B908FA51A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F795BD02-DC44-4D39-82AD-02B153C6F964}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F795BD02-DC44-4D39-82AD-02B153C6F964}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F795BD02-DC44-4D39-82AD-02B153C6F964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943C27A8-157B-4389-ABC2-824B908FA51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943C27A8-157B-4389-ABC2-824B908FA51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943C27A8-157B-4389-ABC2-824B908FA51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943C27A8-157B-4389-ABC2-824B908FA51A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
