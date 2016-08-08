@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PUF.LeadIntegrationService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PUF.LeadIntegrationService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LoanApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppLogs" nillable="true" type="tns:ArrayOfAppLog" />
+      <xs:element minOccurs="0" name="AppRetrievalError" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ApplicationIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DatePosted" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateReceived" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoanApplicationID" type="xs:long" />
+      <xs:element minOccurs="0" name="LosPostAttempts" type="xs:int" />
+      <xs:element minOccurs="0" name="PostToLosSuccessful" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RetrievalAttempts" type="xs:int" />
+      <xs:element minOccurs="0" name="VelocifyUpdateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VelocifyUpdated" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoanApplication" nillable="true" type="tns:LoanApplication" />
+  <xs:complexType name="ArrayOfAppLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AppLog" nillable="true" type="tns:AppLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAppLog" nillable="true" type="tns:ArrayOfAppLog" />
+  <xs:complexType name="AppLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsError" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoanApplication" nillable="true" type="tns:LoanApplication" />
+      <xs:element minOccurs="0" name="LoanApplicationID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LogID" type="xs:long" />
+      <xs:element minOccurs="0" name="LogText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppLog" nillable="true" type="tns:AppLog" />
+</xs:schema>

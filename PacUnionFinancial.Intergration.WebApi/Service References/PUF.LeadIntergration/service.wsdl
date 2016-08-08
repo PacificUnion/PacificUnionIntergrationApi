@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LeadIntegrationService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/PUF.LeadIntegrationService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILeadIntegrationService_GetLoanApplicationByAppIdentifier_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoanApplicationByAppIdentifier" />
+  </wsdl:message>
+  <wsdl:message name="ILeadIntegrationService_GetLoanApplicationByAppIdentifier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoanApplicationByAppIdentifierResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadIntegrationService_SaveLoanApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLoanApplication" />
+  </wsdl:message>
+  <wsdl:message name="ILeadIntegrationService_SaveLoanApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLoanApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadIntegrationService_SaveAppLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAppLog" />
+  </wsdl:message>
+  <wsdl:message name="ILeadIntegrationService_SaveAppLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveAppLogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILeadIntegrationService">
+    <wsdl:operation name="GetLoanApplicationByAppIdentifier">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadIntegrationService/GetLoanApplicationByAppIdentifier" message="tns:ILeadIntegrationService_GetLoanApplicationByAppIdentifier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadIntegrationService/GetLoanApplicationByAppIdentifierResponse" message="tns:ILeadIntegrationService_GetLoanApplicationByAppIdentifier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLoanApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadIntegrationService/SaveLoanApplication" message="tns:ILeadIntegrationService_SaveLoanApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadIntegrationService/SaveLoanApplicationResponse" message="tns:ILeadIntegrationService_SaveLoanApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveAppLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadIntegrationService/SaveAppLog" message="tns:ILeadIntegrationService_SaveAppLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadIntegrationService/SaveAppLogResponse" message="tns:ILeadIntegrationService_SaveAppLog_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILeadIntegrationService" type="tns:ILeadIntegrationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLoanApplicationByAppIdentifier">
+      <soap:operation soapAction="http://tempuri.org/ILeadIntegrationService/GetLoanApplicationByAppIdentifier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLoanApplication">
+      <soap:operation soapAction="http://tempuri.org/ILeadIntegrationService/SaveLoanApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveAppLog">
+      <soap:operation soapAction="http://tempuri.org/ILeadIntegrationService/SaveAppLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LeadIntegrationService">
+    <wsdl:port name="BasicHttpBinding_ILeadIntegrationService" binding="tns:BasicHttpBinding_ILeadIntegrationService">
+      <soap:address location="http://localhost:6000/PUF.PURLService.LeadIntegrationService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
